@@ -1,2 +1,24 @@
 server:
-   port: 8751
+  port: 8741
+spring:
+  application:
+    name: spcd-user
+  jackson:
+    default-property-inclusion: non_null
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 30
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+
+logging:
+  #level:
+    #cn.cslp.ilng.saleservice.mapper: debug
+  path: E:\log\spcd
+  file: ${spring.application.name}
