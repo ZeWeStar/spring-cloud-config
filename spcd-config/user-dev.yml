@@ -1,5 +1,5 @@
 server:
-  port: 8741
+  port: 8742
 spring:
   application:
     name: spcd-user
@@ -19,6 +19,6 @@ eureka:
 
 logging:
   #level:
-    #cn.cslp.ilng.saleservice.mapper: debug
+    #xxx: debug
   path: E:\log\spcd
   file: ${spring.application.name}
