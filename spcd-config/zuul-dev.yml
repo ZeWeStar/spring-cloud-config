@@ -28,7 +28,7 @@ zuul:
   ignoredServices: '*' # 禁止自动创建路由
   routes:
     user:
-      path: /user/**
+      path: /user/zewe/**
       serviceId: spcd-user
       stripPrefix: false
       #sensitiveHeaders:
