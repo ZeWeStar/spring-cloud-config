@@ -33,7 +33,11 @@ zuul:
       #stripPrefix: false
       #sensitiveHeaders:
 
-endpoints:
-  routes:
-    enabled: true
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: env  #必须去除 env
 
