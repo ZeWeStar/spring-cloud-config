@@ -30,7 +30,7 @@ zuul:
     user:
       path: /user/**
       serviceId: spcd-user
-      stripPrefix: false
+      stripPrefix: true
       #sensitiveHeaders:
 
 # actuator
