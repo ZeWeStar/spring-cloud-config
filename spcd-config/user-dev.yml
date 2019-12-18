@@ -1,5 +1,5 @@
 server:
-  port: 8742
+  port: 8741
 spring:
   application:
     name: spcd-user
