@@ -1,1 +1,36 @@
+server:
+  port: 8721
+spring:
+  application:
+    name: spcd-zuul
+  jackson:
+    default-property-inclusion: non_null
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 30
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+
+
+logging:
+  #level:
+    #xxxx: debug
+  path: E:\log\spcd
+  file: ${spring.application.name}
+
+zuul:
+  ignoredServices: '*' # 禁止自动创建路由
+  routes:
+    user:
+      path: /user/**
+      serviceId: spcd-user
+      stripPrefix: false
+      #sensitiveHeaders:
+
 
