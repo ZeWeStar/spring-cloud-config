@@ -33,4 +33,7 @@ zuul:
       #stripPrefix: false
       #sensitiveHeaders:
 
+endpoints:
+  routes:
+    enabled: true
 
