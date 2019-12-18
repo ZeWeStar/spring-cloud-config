@@ -1,2 +1,13 @@
 server:
-   port: 8752
+  port: 8742
+spring:
+  application:
+    name: spcd-user
+  jackson:
+    default-property-inclusion: non_null
+
+logging:
+  #level:
+    #xxx: debug
+  path: E:\log\spcd
+  file: ${spring.application.name}
